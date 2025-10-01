@@ -10,6 +10,7 @@ const projects = [
     description: "A comprehensive task management app with team collaboration features and real-time sync.",
     image: project1,
     tags: ["React Native", "Firebase", "TypeScript"],
+    link: "/projects/project-a",
   },
   {
     id: 2,
@@ -49,6 +50,7 @@ const Index = () => {
               description={project.description}
               image={project.image}
               tags={project.tags}
+              link={project.link}
             />
           ))}
         </div>

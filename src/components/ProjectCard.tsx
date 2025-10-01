@@ -1,15 +1,17 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
   tags: string[];
+  link?: string;
 }
 
-export function ProjectCard({ title, description, image, tags }: ProjectCardProps) {
-  return (
+export function ProjectCard({ title, description, image, tags, link }: ProjectCardProps) {
+  const cardContent = (
     <Card className="overflow-hidden transition-all hover:shadow-lg hover:scale-[1.02] cursor-pointer">
       <div className="aspect-video overflow-hidden">
         <img
@@ -33,4 +35,10 @@ export function ProjectCard({ title, description, image, tags }: ProjectCardProp
       </CardContent>
     </Card>
   );
+
+  if (link) {
+    return <Link to={link}>{cardContent}</Link>;
+  }
+
+  return cardContent;
 }
