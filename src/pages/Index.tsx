@@ -6,10 +6,10 @@ import project3 from "@/assets/project-3.jpg";
 const projects = [
   {
     id: 1,
-    title: "TaskFlow Pro",
+    title: "PlanetFam",
     description: "A comprehensive task management app with team collaboration features and real-time sync.",
     image: project1,
-    tags: ["React Native", "Firebase", "TypeScript"],
+    tags: ["React Native", "Supabase", "TypeScript"],
     link: "/projects/project-a",
   },
   {
