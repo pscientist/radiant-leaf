@@ -1,5 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { useState } from "react";
 import dbDesign from "@/assets/db_design.jpeg";
 import pnlDesign from "@/assets/pnl_design.jpeg";
 
@@ -52,6 +54,8 @@ const employmentHistory = [
 ];
 
 const Employment = () => {
+  const [selectedImage, setSelectedImage] = useState<{ image: string; title: string } | null>(null);
+
   return (
     <div className="p-8 max-w-7xl mx-auto">
       <div className="mb-12">
@@ -109,6 +113,7 @@ const Employment = () => {
                           src={sample.image}
                           alt={sample.title}
                           className="w-full rounded-lg border shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                          onClick={() => setSelectedImage(sample)}
                         />
                       </div>
                     ))}
@@ -119,6 +124,17 @@ const Employment = () => {
           </Card>
         ))}
       </div>
+
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-5xl w-full">
+          <DialogTitle>{selectedImage?.title}</DialogTitle>
+          <img
+            src={selectedImage?.image}
+            alt={selectedImage?.title || "Code sample"}
+            className="w-full h-auto rounded-lg"
+          />
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
