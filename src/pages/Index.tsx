@@ -1,30 +1,60 @@
 import { ProjectCard } from "@/components/ProjectCard";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
+import planetfam from "@/assets/planetfam.jpg";
+import mynexthome from "@/assets/mynexthome.jpg";
+import passwdbook from "@/assets/passwdbook.jpg";
+import dominosApp from "@/assets/dominos-app.jpg";
+import myshopping from "@/assets/myshopping.jpg";
+import donewithit from "@/assets/donewithit.jpg";
 
 const projects = [
   {
     id: 1,
     title: "PlanetFam",
-    description: "A comprehensive task management app with team collaboration features and real-time sync.",
-    image: project1,
-    tags: ["React Native", "Supabase", "TypeScript"],
+    description: "An interactive quiz game on geographical knowledge in React Native. Hosted API services for country data on Vercel, with Unsplash APIs for country images and Supabase for user account management.",
+    image: planetfam,
+    tags: ["React Native", "TypeScript", "Supabase", "React Router", "Jest"],
     link: "/projects/project-a",
+    status: "Published",
   },
   {
     id: 2,
-    title: "FitTrack",
-    description: "Fitness tracking application with personalized workout plans and nutrition monitoring.",
-    image: project2,
-    tags: ["Flutter", "Node.js", "MongoDB"],
+    title: "MyNextHome",
+    description: "A React Native app to log open home visits with structured details (address, price, rooms, sqm), diary notes, and photos uploads, featuring offline-first storage with AsyncStorage synced with remote server.",
+    image: mynexthome,
+    tags: ["React Native", "Formik", "Yup", "AsyncStorage", "Expo Image-Picker"],
+    status: "In progress",
   },
   {
     id: 3,
-    title: "ShopEase",
-    description: "Modern e-commerce platform with seamless checkout and inventory management.",
-    image: project3,
-    tags: ["React Native", "Stripe", "PostgreSQL"],
+    title: "Passwd Book",
+    description: "A password manager written in React Native with Firebase user management, Async Storage, and alphabetical scrollable list. Features edit/create screens with Formik and Yup validation.",
+    image: passwdbook,
+    tags: ["React Native", "Firebase", "AsyncStorage", "React Navigation", "Formik"],
+    status: "Repackaged",
+  },
+  {
+    id: 4,
+    title: "Dominos Employees App",
+    description: "Employee management app with React Query for communicating with the Company server. Lists employee's pay slips, shifts, user profile and company notices with two-step authentication.",
+    image: dominosApp,
+    tags: ["React Native", "React Query", "Two-step Auth"],
+    status: "Published",
+  },
+  {
+    id: 5,
+    title: "My-Shopping Groceries App",
+    description: "Groceries shopping list management app with Firebase user management, Async Storage, React Navigation, and list screens built with Formik and Yup validation.",
+    image: myshopping,
+    tags: ["React Native", "Firebase", "AsyncStorage", "React Navigation", "Formik"],
+    status: "Published",
+  },
+  {
+    id: 6,
+    title: "DoneWithIt App",
+    description: "TradeMe-like Buy/Sell app with register/login screens, componentised GUI elements, user management, listing screens with Formik and Yup validation, image upload, browse, category picker, push notifications, and location awareness.",
+    image: donewithit,
+    tags: ["React Native", "Formik", "Yup", "Push Notifications", "Location"],
+    status: "Published",
   },
 ];
 
@@ -51,6 +81,7 @@ const Index = () => {
               image={project.image}
               tags={project.tags}
               link={project.link}
+              status={project.status}
             />
           ))}
         </div>

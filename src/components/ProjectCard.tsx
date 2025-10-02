@@ -8,9 +8,17 @@ interface ProjectCardProps {
   image: string;
   tags: string[];
   link?: string;
+  status?: string;
 }
 
-export function ProjectCard({ title, description, image, tags, link }: ProjectCardProps) {
+export function ProjectCard({ title, description, image, tags, link, status }: ProjectCardProps) {
+  const getStatusVariant = (status?: string) => {
+    if (!status) return "secondary";
+    if (status === "Published") return "default";
+    if (status === "In progress") return "outline";
+    if (status === "Repackaged") return "secondary";
+    return "secondary";
+  };
   const cardContent = (
     <Card className="overflow-hidden transition-all hover:shadow-lg hover:scale-[1.02] cursor-pointer">
       <div className="aspect-video overflow-hidden">
@@ -21,7 +29,14 @@ export function ProjectCard({ title, description, image, tags, link }: ProjectCa
         />
       </div>
       <CardHeader>
-        <CardTitle className="text-xl">{title}</CardTitle>
+        <div className="flex items-start justify-between gap-2 mb-2">
+          <CardTitle className="text-xl flex-1">{title}</CardTitle>
+          {status && (
+            <Badge variant={getStatusVariant(status)} className="shrink-0">
+              {status}
+            </Badge>
+          )}
+        </div>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
