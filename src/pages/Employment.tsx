@@ -1,5 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import dbDesign from "@/assets/db_design.jpeg";
+import pnlDesign from "@/assets/pnl_design.jpeg";
 
 const employmentHistory = [
   {
@@ -16,6 +18,10 @@ const employmentHistory = [
       "Maintained daily rostering solutions.",
     ],
     technologies: ["PHP 8", "jQuery", "MySQL", "Java", "React Native"],
+    codeSamples: [
+      { image: dbDesign, title: "Database Design" },
+      { image: pnlDesign, title: "P&L Dashboard" },
+    ],
   },
   {
     id: 2,
@@ -92,6 +98,23 @@ const Employment = () => {
                   ))}
                 </div>
               </div>
+              {job.codeSamples && (
+                <div className="mt-6">
+                  <h4 className="font-semibold mb-3">Code Samples:</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {job.codeSamples.map((sample, index) => (
+                      <div key={index} className="space-y-2">
+                        <p className="text-sm font-medium text-muted-foreground">{sample.title}</p>
+                        <img
+                          src={sample.image}
+                          alt={sample.title}
+                          className="w-full rounded-lg border shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </CardContent>
           </Card>
         ))}
