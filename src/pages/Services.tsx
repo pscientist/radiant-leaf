@@ -1,7 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 
 const services = [
-  "One-page business websites",
   "Multi-page sites (About, Services, Contact)",
   "Landing pages for products or events",
   "Blog setup (WordPress, or static with CMS)",
