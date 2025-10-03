@@ -1,8 +1,28 @@
 import { ProjectCard } from "@/components/ProjectCard";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import fishpond from "@/assets/fishpond.jpg";
 import grabone from "@/assets/grabone.jpg";
 import companyLogo from "@/assets/company-logo.webp";
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Gerry Smith",
+    title: "Technical Program Manager at Google",
+    relationship: "Manager",
+    date: "January 11, 2013",
+    text: "Cathy is a joy to work with. She is organised and focused in her web development, and knows how to ask the right questions to clear up any issues in the requirements as well as the design. She is patient, diligent, and strives to make the customer extremely happy with the result. I also appreciate that she does this without drama -- she just makes it happen."
+  },
+  {
+    id: 2,
+    name: "Jaco Swart",
+    title: "Information Designer",
+    relationship: "Manager",
+    date: "January 10, 2013",
+    text: "Cathy is a conscientious and dedicated worker that communicates well, is a self-starter and a fast learner. I value her front-end development skills: CSS, JavaScript and HTML that is clean, elegant and standards-based. Cathy keeps cool and focused when it gets busy, and is a great person to have around. I can definitely recommend Cathy!"
+  }
+];
 
 const projects = [
   {
@@ -54,6 +74,27 @@ const Index = () => {
               link={project.link}
               status={project.status}
             />
+          ))}
+        </div>
+      </div>
+
+      {/* Testimonials Section */}
+      <div className="mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-300">Testimonials</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {testimonials.map((testimonial) => (
+            <Card key={testimonial.id} className="bg-card">
+              <CardHeader>
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-xl font-semibold text-foreground">{testimonial.name}</h3>
+                  <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                  <p className="text-xs text-muted-foreground">{testimonial.date} · {testimonial.relationship}</p>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">{testimonial.text}</p>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
