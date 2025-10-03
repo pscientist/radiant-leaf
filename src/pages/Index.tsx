@@ -1,5 +1,28 @@
+import { ProjectCard } from "@/components/ProjectCard";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import fishpond from "@/assets/fishpond.jpg";
+import grabone from "@/assets/grabone.jpg";
+
+const projects = [
+  {
+    id: 1,
+    title: "Fishpond",
+    description: "New Zealand's largest online marketplace with millions of products. Built scalable e-commerce platform with advanced search, inventory management, and secure payment processing.",
+    image: fishpond,
+    tags: ["PHP", "MySQL", "React", "REST APIs", "E-commerce"],
+    link: "#",
+    status: "Published",
+  },
+  {
+    id: 2,
+    title: "GrabOne",
+    description: "Leading daily deals platform connecting customers with local businesses. Developed deal management system, user authentication, and integrated payment solutions for thousands of transactions.",
+    image: grabone,
+    tags: ["PHP", "PostgreSQL", "JavaScript", "Payment Integration"],
+    link: "#",
+    status: "Published",
+  },
+];
 
 const Index = () => {
   return (
@@ -17,39 +40,21 @@ const Index = () => {
         </Button>
       </div>
 
-      {/* Services Section */}
       <div className="mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">Services</h2>
-        <Card className="max-w-3xl mx-auto">
-          <CardContent className="pt-6">
-            <ul className="space-y-4 text-lg">
-              <li className="flex items-start">
-                <span className="text-primary mr-3 mt-1">•</span>
-                <span className="text-foreground">One-page business websites</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3 mt-1">•</span>
-                <span className="text-foreground">Multi-page sites (About, Services, Contact)</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3 mt-1">•</span>
-                <span className="text-foreground">Landing pages for products or events</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3 mt-1">•</span>
-                <span className="text-foreground">Blog setup (WordPress, or static with CMS)</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3 mt-1">•</span>
-                <span className="text-foreground">Contact forms, maps, simple booking forms</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3 mt-1">•</span>
-                <span className="text-foreground">Hosting + domain setup guidance</span>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-300">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              tags={project.tags}
+              link={project.link}
+              status={project.status}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
