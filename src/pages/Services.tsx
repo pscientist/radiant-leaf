@@ -3,6 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 const services = [
   "Multi-page sites (About, Services, Contact)",
   "Landing pages for products or events",
+  "Product gallery page",
   "Contact forms, maps, simple booking forms",
   "Hosting + domain setup guidance",
 ];
