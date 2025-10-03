@@ -1,4 +1,3 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
 
 const services = [
@@ -19,24 +18,14 @@ const Services = () => {
           Professional web development services tailored to your needs
         </p>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>What I Can Deliver</CardTitle>
-            <CardDescription>
-              Comprehensive web solutions for businesses and individuals
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-4">
-              {services.map((service, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-lg">{service}</span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
+        <ul className="space-y-4">
+          {services.map((service, index) => (
+            <li key={index} className="flex items-start gap-3">
+              <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+              <span className="text-lg">{service}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
