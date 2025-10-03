@@ -14,7 +14,7 @@ const Services = () => {
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">Services</h1>
         <p className="text-muted-foreground mb-8">
-          Professional web development services tailored to your needs
+          I don't just build websites — I listen to what you need and deliver it exactly
         </p>
 
         <ul className="space-y-4">
