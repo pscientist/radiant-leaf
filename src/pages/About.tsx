@@ -66,7 +66,7 @@ const About = () => {
       </div>
 
       <div className="mb-12">
-        <h2 className="mb-4 text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        <h2 className="mb-4 text-3xl font-bold">
           Employment History
         </h2>
         <p className="text-xl text-muted-foreground">
