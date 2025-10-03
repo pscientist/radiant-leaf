@@ -1,4 +1,4 @@
-import { Home, Briefcase, User, ChevronRight } from "lucide-react";
+import { Home, Briefcase, User, ChevronRight, Wrench } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import {
   Sidebar,
@@ -22,6 +22,7 @@ import {
 
 const navigationItems = [
   { title: "Home", url: "/", icon: Home },
+  { title: "Services", url: "/services", icon: Wrench },
   { title: "Employment History", url: "/employment", icon: Briefcase },
   { title: "About", url: "/about", icon: User },
 ];
