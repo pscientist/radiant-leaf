@@ -62,16 +62,44 @@ const Index = () => {
   return (
     <div className="p-8 max-w-7xl mx-auto">
       <div className="mb-12">
-        <h1 className="mb-4 text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-          Mobile App Developer
+        <h1 className="mb-6 text-4xl md:text-5xl font-bold text-white leading-tight">
+          Cathy Lai (Yunju)
         </h1>
-        <p className="text-xl text-muted-foreground">
-          Crafting innovative mobile experiences with cutting-edge technologies
-        </p>
+        <div className="space-y-4">
+          <h2 className="text-3xl font-bold text-white mb-6">Core Skills</h2>
+
+          <p className="text-lg text-gray-300 leading-relaxed">
+            <span className="font-bold text-white">Backend:</span> <span className="text-gray-400 font-semibold">PHP 8, MySQL, PostgreSQL, Java, Python, Node.js</span>
+          </p>
+
+          <p className="text-lg text-gray-300 leading-relaxed">
+            <span className="font-bold text-white">Frontend:</span> <span className="text-gray-400 font-semibold">React</span>, <span className="text-gray-400 font-semibold">React Native</span>, <span className="text-gray-400 font-semibold">JavaScript</span>, <span className="text-gray-400 font-semibold">TypeScript</span>, <span className="text-gray-400 font-semibold">HTML5</span>, <span className="text-gray-400 font-semibold">CSS</span>, <span className="text-gray-400 font-semibold">Responsive UI/UX</span>
+          </p>
+
+          <p className="text-lg text-gray-300 leading-relaxed">
+            <span className="font-bold text-white">API Development:</span> <span className="text-gray-400 font-semibold">RESTful APIs</span>, <span className="text-gray-400 font-semibold">JSON</span>, <span className="text-gray-400 font-semibold">OAuth-based authentication</span>
+          </p>
+
+          <p className="text-lg text-gray-300 leading-relaxed">
+            <span className="font-bold text-white">DevOps & Tools:</span> <span className="text-gray-400 font-semibold">Git</span>, <span className="text-gray-400 font-semibold">GitHub Actions (CI/CD)</span>, <span className="text-gray-400 font-semibold">AWS SES/SQS</span>, <span className="text-gray-400 font-semibold">automated deployments</span>
+          </p>
+
+          <p className="text-lg text-gray-300 leading-relaxed">
+            <span className="font-bold text-white">Architecture:</span> <span className="text-gray-400 font-semibold">Object-Oriented Design</span>, <span className="text-gray-400 font-semibold">Microservices</span>, <span className="text-gray-400 font-semibold">Serverless</span> (familiarity)
+          </p>
+
+          <p className="text-lg text-gray-300 leading-relaxed">
+            <span className="font-bold text-white">Security & Testing:</span> <span className="text-gray-400 font-semibold">Code reviews</span>, <span className="text-gray-400 font-semibold">OWASP awareness</span>, <span className="text-gray-400 font-semibold">unit and integration testing</span>
+          </p>
+
+          <p className="text-lg text-gray-300 leading-relaxed">
+            <span className="font-bold text-white">Other:</span> Mentoring junior developers, stakeholder engagement, requirements gathering
+          </p>
+        </div>
       </div>
 
       <div className="mb-8">
-        <h2 className="text-3xl font-bold mb-6">Featured Projects</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-300">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <ProjectCard
