@@ -23,7 +23,6 @@ import {
 const navigationItems = [
   { title: "Home", url: "/", icon: Home },
   { title: "Services", url: "/services", icon: Wrench },
-  { title: "Employment History", url: "/employment", icon: Briefcase },
   { title: "About", url: "/about", icon: User },
 ];
 
