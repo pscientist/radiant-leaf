@@ -1,4 +1,4 @@
-import { Home, Briefcase, User, ChevronRight, Wrench } from "lucide-react";
+import { Home, User, Wrench } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import {
   Sidebar,
@@ -9,26 +9,13 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubItem,
-  SidebarMenuSubButton,
   useSidebar,
 } from "@/components/ui/sidebar";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
 
 const navigationItems = [
   { title: "Home", url: "/", icon: Home },
   { title: "Services", url: "/services", icon: Wrench },
   { title: "About", url: "/about", icon: User },
-];
-
-const projectItems = [
-  { title: "Project A", url: "/projects/project-a" },
-  { title: "Project B", url: "/projects/project-b" },
 ];
 
 export function AppSidebar() {
@@ -59,38 +46,6 @@ export function AppSidebar() {
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
-
-              <Collapsible defaultOpen className="group/collapsible">
-                <SidebarMenuItem>
-                  <CollapsibleTrigger asChild>
-                    <SidebarMenuButton>
-                      <Briefcase className="h-4 w-4" />
-                      <span>Projects</span>
-                      <ChevronRight className="ml-auto h-4 w-4 transition-transform group-data-[state=open]/collapsible:rotate-90" />
-                    </SidebarMenuButton>
-                  </CollapsibleTrigger>
-                  <CollapsibleContent>
-                    <SidebarMenuSub>
-                      {projectItems.map((project) => (
-                        <SidebarMenuSubItem key={project.title}>
-                          <SidebarMenuSubButton asChild>
-                            <NavLink
-                              to={project.url}
-                              className={({ isActive }) =>
-                                isActive
-                                  ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium"
-                                  : ""
-                              }
-                            >
-                              <span>{project.title}</span>
-                            </NavLink>
-                          </SidebarMenuSubButton>
-                        </SidebarMenuSubItem>
-                      ))}
-                    </SidebarMenuSub>
-                  </CollapsibleContent>
-                </SidebarMenuItem>
-              </Collapsible>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
