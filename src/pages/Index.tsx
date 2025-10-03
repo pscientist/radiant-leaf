@@ -2,6 +2,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { Button } from "@/components/ui/button";
 import fishpond from "@/assets/fishpond.jpg";
 import grabone from "@/assets/grabone.jpg";
+import companyLogo from "@/assets/company-logo.webp";
 
 const projects = [
   {
@@ -56,6 +57,18 @@ const Index = () => {
           ))}
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="mt-16 pt-8 border-t border-border text-center">
+        <img 
+          src={companyLogo} 
+          alt="Radiant Leaf Studio" 
+          className="w-24 h-24 mx-auto mb-4"
+        />
+        <p className="text-muted-foreground">
+          © {new Date().getFullYear()} Radiant Leaf Studio. All rights reserved.
+        </p>
+      </footer>
     </div>
   );
 };
