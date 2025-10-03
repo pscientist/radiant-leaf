@@ -69,9 +69,6 @@ const About = () => {
         <h2 className="mb-4 text-3xl font-bold">
           Employment History
         </h2>
-        <p className="text-xl text-muted-foreground">
-          Professional experience in web and mobile development
-        </p>
       </div>
 
       <div className="space-y-6">
