@@ -1,4 +1,4 @@
-import { Home, User, Mail } from "lucide-react";
+import { Home, User, Mail, Briefcase } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import {
   Sidebar,
@@ -14,6 +14,7 @@ import {
 
 const navigationItems = [
   { title: "Home", url: "/", icon: Home },
+  { title: "Portfolio", url: "/portfolio", icon: Briefcase },
   { title: "About", url: "/about", icon: User },
   { title: "Contact", url: "/contact", icon: Mail },
 ];
