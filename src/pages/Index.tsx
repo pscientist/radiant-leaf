@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import fishpond from "@/assets/fishpond.jpg";
 import grabone from "@/assets/grabone.jpg";
 import companyLogo from "@/assets/company-logo.webp";
+import heroCoding from "@/assets/hero-coding.jpg";
 
 const testimonials = [
   {
@@ -51,15 +52,26 @@ const Index = () => {
   return (
     <div className="p-8 max-w-7xl mx-auto">
       {/* Hero Section */}
-      <div className="mb-16 text-center max-w-4xl mx-auto py-12">
-        <h1 className="mb-6 text-4xl md:text-6xl font-bold text-foreground leading-tight font-dm-serif">Cathy Lai (Yun-ju)</h1>
-        <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed font-inter">
-          Always learning, always improving.<br />
-          Writing good code is my lifetime passion:)
-        </p>
-        <Button size="lg" className="text-lg px-8 py-6">
-          View More...
-        </Button>
+      <div className="mb-16 relative overflow-hidden rounded-2xl">
+        <div className="grid md:grid-cols-2 gap-8 items-center min-h-[500px]">
+          <div className="relative h-full min-h-[500px] order-2 md:order-1">
+            <img 
+              src={heroCoding} 
+              alt="Professional developer workspace with hands typing on keyboard" 
+              className="absolute inset-0 w-full h-full object-cover rounded-l-2xl"
+            />
+          </div>
+          <div className="py-12 px-8 order-1 md:order-2 text-center md:text-left">
+            <h1 className="mb-6 text-4xl md:text-6xl font-bold text-foreground leading-tight font-dm-serif">Cathy Lai (Yun-ju)</h1>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed font-inter">
+              Always learning, always improving.<br />
+              Writing good code is my lifetime passion:)
+            </p>
+            <Button size="lg" className="text-lg px-8 py-6">
+              View More...
+            </Button>
+          </div>
+        </div>
       </div>
 
       <div className="mb-8">
