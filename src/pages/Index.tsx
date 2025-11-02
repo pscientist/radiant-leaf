@@ -101,6 +101,25 @@ const Index = () => {
         </div>
       </div>
 
+      {/* Company Logos Section */}
+      <div className="mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-300 text-center">Companies I've Worked With</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+          <div className="w-32 h-32 bg-muted rounded-lg flex items-center justify-center">
+            <span className="text-sm text-muted-foreground">University of Auckland</span>
+          </div>
+          <div className="w-32 h-32 bg-muted rounded-lg flex items-center justify-center">
+            <span className="text-sm text-muted-foreground">GrabOne</span>
+          </div>
+          <div className="w-32 h-32 bg-muted rounded-lg flex items-center justify-center">
+            <span className="text-sm text-muted-foreground">Fishpond</span>
+          </div>
+          <div className="w-32 h-32 bg-muted rounded-lg flex items-center justify-center">
+            <span className="text-sm text-muted-foreground">Tait Electronics</span>
+          </div>
+        </div>
+      </div>
+
       {/* Footer */}
       <footer className="mt-16 pt-8 border-t border-border text-center">
         <img src={companyLogo} alt="Radiant Leaf Studio" className="w-24 h-24 mx-auto mb-4" />
