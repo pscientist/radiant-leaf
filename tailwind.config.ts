@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         'dm-serif': ['"DM Serif Display"', 'serif'],
         'inter': ['Inter', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
