@@ -53,7 +53,7 @@ const Index = () => {
       {/* Hero Section */}
       <div className="mb-16 text-center max-w-4xl mx-auto py-12">
         <h1 className="mb-6 text-4xl md:text-6xl font-bold text-foreground leading-tight font-dm-serif">Cathy Lai (Yun-ju)</h1>
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed font-inter">
+        <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed font-inter">
           Always learning, always improving. Writing good code is my lifetime passion:)
         </p>
         <Button size="lg" className="text-lg px-8 py-6">
